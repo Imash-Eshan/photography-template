@@ -259,6 +259,10 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-back i {
+    margin-right: 8px;
+}
+
 /* ==================== Admin Dashboard ==================== */
 .admin-dashboard {
     width: 100%;
