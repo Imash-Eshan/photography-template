@@ -4,7 +4,6 @@ include 'config.php';
 include 'includes/header.php';
 ?>
 <link rel="stylesheet" href="css/about.css">
-<br>
 <section class="about-page" data-aos="fade-up">
     <div class="container">
         <!-- Hero Section -->
