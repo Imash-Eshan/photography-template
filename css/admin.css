@@ -224,6 +224,41 @@ body {
     font-size: 0.9rem;
 }
 
+
+.login-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login-actions .btn-login,
+.login-actions .btn-back {
+    flex: 1;
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    background: #f8f9fa;
+    color: #666;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #e9ecef;
+    border-color: #c4a484;
+    color: #a0846a;
+    transform: translateY(-2px);
+}
+
 /* ==================== Admin Dashboard ==================== */
 .admin-dashboard {
     width: 100%;

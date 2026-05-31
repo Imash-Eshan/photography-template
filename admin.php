@@ -111,15 +111,23 @@ if (isset($_SESSION['admin_logged_in']) && isset($_GET['delete'])) {
                         <i class="fas fa-lock"></i>
                         <input type="password" name="password" placeholder="Password" required>
                     </div>
-                    <button type="submit" name="login" class="btn-login">
-                        <i class="fas fa-sign-in-alt"></i> Login
-                    </button>
+                    <div class="login-actions">
+                        <a href="index.php" class="btn-back">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+
+    <button type="submit" name="login" class="btn-login">
+        <i class="fas fa-sign-in-alt"></i> Login
+    </button>
+
+    
+</div>
                 </form>
                 
-                <div class="login-demo">
+                <!-- <div class="login-demo">
                     <p><strong>Demo Credentials:</strong></p>
                     <p>Username: admin<br>Password: demo123</p>
-                </div>
+                </div> -->
             </div>
         <?php else: ?>
             <!-- Admin Dashboard with Loader -->
