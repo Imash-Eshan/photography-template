@@ -1,0 +1,74 @@
+{
+    "images": [
+        {
+            "id": "img_001",
+            "filename": "wedding-1.jpg",
+            "path": "uploads\/wedding-1.jpg",
+            "caption": "Elegant beach wedding ceremony",
+            "category": "wedding",
+            "page": "gallery",
+            "order": 1,
+            "date_added": "2026-05-16"
+        },
+        {
+            "id": "img_002",
+            "filename": "wedding-2.jpg",
+            "path": "uploads\/wedding-2.jpg",
+            "caption": "First dance moment",
+            "category": "wedding",
+            "page": "gallery",
+            "order": 2,
+            "date_added": "2026-05-16"
+        },
+        {
+            "id": "img_003",
+            "filename": "portrait-1.jpg",
+            "path": "uploads\/portrait-1.jpg",
+            "caption": "Professional headshot",
+            "category": "portrait",
+            "page": "gallery",
+            "order": 3,
+            "date_added": "2026-05-16"
+        },
+        {
+            "id": "img_004",
+            "filename": "event-1.jpg",
+            "path": "uploads\/event-1.jpg",
+            "caption": "Corporate event coverage",
+            "category": "event",
+            "page": "gallery",
+            "order": 4,
+            "date_added": "2026-05-16"
+        },
+        {
+            "id": "img_005",
+            "filename": "nature-1.jpg",
+            "path": "uploads\/nature-1.jpg",
+            "caption": "Sunset landscape",
+            "category": "nature",
+            "page": "gallery",
+            "order": 5,
+            "date_added": "2026-05-16"
+        },
+        {
+            "id": "img_006",
+            "filename": "1779022462_Gemini_Generated_Image_lq1l1ilq1l1ilq1l.png",
+            "path": "uploads\/1779022462_Gemini_Generated_Image_lq1l1ilq1l1ilq1l.png",
+            "caption": "new image",
+            "category": "event",
+            "page": "gallery",
+            "order": 6,
+            "date_added": "2026-05-17"
+        },
+        {
+            "id": "img_007",
+            "filename": "1780233185_dvfdf.png",
+            "path": "uploads\/1780233185_dvfdf.png",
+            "caption": "sdc",
+            "category": "nature",
+            "page": "gallery",
+            "order": 7,
+            "date_added": "2026-05-31"
+        }
+    ]
+}
