@@ -27,9 +27,9 @@ include 'includes/header.php';
                 <div class="pricing-header">
                     <h3>Basic</h3>
                     <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount monthly-amount">499</span>
-                        <span class="yearly-amount" style="display: none;">399</span>
+                        <span class="currency">LKR</span>
+                        <span class="amount monthly-amount">15,000</span>
+                        <span class="yearly-amount" style="display: none;">12,000</span>
                         <span class="period">/session</span>
                     </div>
                 </div>
@@ -48,9 +48,9 @@ include 'includes/header.php';
                 <div class="pricing-header">
                     <h3>Premium</h3>
                     <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount monthly-amount">999</span>
-                        <span class="yearly-amount" style="display: none;">799</span>
+                        <span class="currency">LKR</span>
+                        <span class="amount monthly-amount">30,000</span>
+                        <span class="yearly-amount" style="display: none;">24,000</span>
                         <span class="period">/session</span>
                     </div>
                 </div>
@@ -68,9 +68,9 @@ include 'includes/header.php';
                 <div class="pricing-header">
                     <h3>Luxury</h3>
                     <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount monthly-amount">1999</span>
-                        <span class="yearly-amount" style="display: none;">1599</span>
+                        <span class="currency">LKR</span>
+                        <span class="amount monthly-amount">60,000</span>
+                        <span class="yearly-amount" style="display: none;">48,000</span>
                         <span class="period">/session</span>
                     </div>
                 </div>
@@ -92,17 +92,17 @@ include 'includes/header.php';
                 <div class="addon-card">
                     <i class="fas fa-video"></i>
                     <h4>Video Coverage</h4>
-                    <p>$500</p>
+                    <p>LKR 15,000</p>
                 </div>
                 <div class="addon-card">
                     <i class="fas fa-drone"></i>
                     <h4>Drone Photography</h4>
-                    <p>$300</p>
+                    <p>LKR 10,000</p>
                 </div>
                 <div class="addon-card">
                     <i class="fas fa-clock"></i>
                     <h4>Extra Hour</h4>
-                    <p>$150</p>
+                    <p>LKR 5,000</p>
                 </div>
             </div>
         </div>

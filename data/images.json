@@ -2,73 +2,63 @@
     "images": [
         {
             "id": "img_001",
-            "filename": "wedding-1.jpg",
-            "path": "uploads\/wedding-1.jpg",
-            "caption": "Elegant beach wedding ceremony",
+            "filename": "1780320458_Best_Surrey_wedding_photographer_0215.jpg",
+            "path": "uploads\/1780320458_Best_Surrey_wedding_photographer_0215.jpg",
+            "caption": "wedding1",
             "category": "wedding",
-            "page": "gallery",
+            "page": "portfolio",
             "order": 1,
-            "date_added": "2026-05-16"
+            "date_added": "2026-06-01"
         },
         {
             "id": "img_002",
-            "filename": "wedding-2.jpg",
-            "path": "uploads\/wedding-2.jpg",
-            "caption": "First dance moment",
+            "filename": "1780320504_jonathan_borba_PBibDIPrJwY_unsplash.jpg",
+            "path": "uploads\/1780320504_jonathan_borba_PBibDIPrJwY_unsplash.jpg",
+            "caption": "wedding2",
             "category": "wedding",
-            "page": "gallery",
+            "page": "portfolio",
             "order": 2,
-            "date_added": "2026-05-16"
+            "date_added": "2026-06-01"
         },
         {
             "id": "img_003",
-            "filename": "portrait-1.jpg",
-            "path": "uploads\/portrait-1.jpg",
-            "caption": "Professional headshot",
-            "category": "portrait",
+            "filename": "1780320560_wedding_photography_oxford_96_4_309153_166490451084637.jpeg",
+            "path": "uploads\/1780320560_wedding_photography_oxford_96_4_309153_166490451084637.jpeg",
+            "caption": "wedding3",
+            "category": "wedding",
             "page": "gallery",
             "order": 3,
-            "date_added": "2026-05-16"
+            "date_added": "2026-06-01"
         },
         {
             "id": "img_004",
-            "filename": "event-1.jpg",
-            "path": "uploads\/event-1.jpg",
-            "caption": "Corporate event coverage",
-            "category": "event",
+            "filename": "1780320603_L_M_2023_1026_154848_50912_SWP.jpg",
+            "path": "uploads\/1780320603_L_M_2023_1026_154848_50912_SWP.jpg",
+            "caption": "wedding4",
+            "category": "wedding",
             "page": "gallery",
             "order": 4,
-            "date_added": "2026-05-16"
+            "date_added": "2026-06-01"
         },
         {
             "id": "img_005",
-            "filename": "nature-1.jpg",
-            "path": "uploads\/nature-1.jpg",
-            "caption": "Sunset landscape",
-            "category": "nature",
+            "filename": "1780320617_the_breakers_069_wedding_photographer_joshua_dwain_black_west_palm_beach.jpg",
+            "path": "uploads\/1780320617_the_breakers_069_wedding_photographer_joshua_dwain_black_west_palm_beach.jpg",
+            "caption": "wedding5",
+            "category": "wedding",
             "page": "gallery",
             "order": 5,
-            "date_added": "2026-05-16"
+            "date_added": "2026-06-01"
         },
         {
             "id": "img_006",
-            "filename": "1779022462_Gemini_Generated_Image_lq1l1ilq1l1ilq1l.png",
-            "path": "uploads\/1779022462_Gemini_Generated_Image_lq1l1ilq1l1ilq1l.png",
-            "caption": "new image",
-            "category": "event",
+            "filename": "1780320836_Best_Long_Island_Wedding_Photographers_037_.jpg",
+            "path": "uploads\/1780320836_Best_Long_Island_Wedding_Photographers_037_.jpg",
+            "caption": "scd",
+            "category": "wedding",
             "page": "gallery",
             "order": 6,
-            "date_added": "2026-05-17"
-        },
-        {
-            "id": "img_007",
-            "filename": "1780233185_dvfdf.png",
-            "path": "uploads\/1780233185_dvfdf.png",
-            "caption": "sdc",
-            "category": "nature",
-            "page": "gallery",
-            "order": 7,
-            "date_added": "2026-05-31"
+            "date_added": "2026-06-01"
         }
     ]
 }

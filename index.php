@@ -18,22 +18,22 @@ include 'includes/header.php';
             <a href="contact.php" class="btn btn-secondary">Book a Session</a>
         </div>
     </div>
-    <!-- <div class="hero-scroll">
-        <span>Scroll Down</span>
-        <i class="fas fa-chevron-down"></i>
-    </div> -->
+    
+    <!-- Dynamic light/shadow sweep effect -->
+    <div class="hero-sweep"></div>
+    
     <!-- Decorative floating elements -->
-<div class="hero-decoration">
-    <div class="deco-circle"></div>
-    <div class="deco-circle"></div>
-    <div class="deco-circle"></div>
-</div>
+    <div class="hero-decoration">
+        <div class="deco-circle"></div>
+        <div class="deco-circle"></div>
+        <div class="deco-circle"></div>
+    </div>
 
-<!-- Scroll indicator -->
-<div class="hero-scroll-indicator" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">
-    <span>SCROLL</span>
-    <div class="scroll-mouse"></div>
-</div>
+    <!-- Scroll indicator -->
+    <div class="hero-scroll-indicator" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">
+        <span>SCROLL</span>
+        <div class="scroll-mouse"></div>
+    </div>
 </section>
 
 <!-- Featured Work -->

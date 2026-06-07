@@ -2,50 +2,6 @@
 /* HOME PAGE SPECIFIC STYLES */
 /* ============================================ */
 
-/* .hero {
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    min-height: 120px;
-} */
-
-.typed-text {
-    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.cursor {
-    display: inline-block;
-    width: 3px;
-    background-color: var(--accent);
-    animation: blink 1s infinite;
-}
-
-/* @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-} */
-
-/* .hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-} */
-
-
 /* ============================================ */
 /* ENHANCED HERO SECTION - Mobile First */
 /* ============================================ */
@@ -70,7 +26,7 @@
     top: -50%;
     left: -50%;
     background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-    opacity: 0.05;
+    opacity: 0.08;
     animation: rotate 30s linear infinite;
     pointer-events: none;
 }
@@ -91,16 +47,41 @@
     to { transform: rotate(360deg); }
 }
 
-/* Hero content container */
+/* Hero content container - Glassmorphism with glow */
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     max-width: 800px;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(16px);
+    border-radius: 40px;
+    padding: 2rem 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 20px rgba(196, 164, 132, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
 }
 
-/* Animated title */
+.hero-content:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25), 0 0 30px rgba(196, 164, 132, 0.5);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Dark mode glass styling */
+.dark-mode .hero-content {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(16px);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(196, 164, 132, 0.4);
+}
+
+.dark-mode .hero-content:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(196, 164, 132, 0.6);
+}
+
+/* Hero title - fixed height to prevent resizing during typing */
 .hero-title {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -108,10 +89,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 5px;
+
+    min-height: 2.5em;
 }
 
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+        min-height: 2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 4.5rem;
+        min-height: 1.8em;
+    }
+}
 .typed-text {
     background: linear-gradient(135deg, var(--accent), var(--accent-dark), var(--accent));
     background-size: 200% 200%;
@@ -119,6 +113,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientShift 3s ease infinite;
+    white-space: normal; /* Allow wrapping but height is fixed by parent */
 }
 
 @keyframes gradientShift {
@@ -194,6 +189,44 @@
     background: rgba(var(--bg-primary-rgb), 0.5);
 }
 
+/* Dynamic horizontal sweep effect - slanted */
+.hero-sweep {
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(196, 164, 132, 0.35), transparent);
+    pointer-events: none;
+    z-index: 2;
+    transform: skewY(5deg); /* Makes it slanted for a natural look */
+    animation: sweep 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Dark mode sweep: brighter shiny light */
+.dark-mode .hero-sweep {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+}
+
+@keyframes sweep {
+    0% {
+        left: -120%;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+/* ============================================ */
+/* ADJUSTING SWEEP INTENSITY                    */
+/* ============================================ */
+/* To change the sweep intensity:               */
+/* - Light mode: edit the opacity in the middle color of the gradient */
+/*   (currently 0.35 for brown, 0.6 for white in dark mode)          */
+/* - Dark mode: edit the 0.6 value for white opacity                 */
+/* Example: Increase to 0.5 for stronger brown sweep                 */
+/* ============================================ */
+
 /* Floating decorative elements */
 .hero-decoration {
     position: absolute;
@@ -209,7 +242,7 @@
     position: absolute;
     border-radius: 50%;
     background: var(--accent);
-    opacity: 0.1;
+    opacity: 0.15;
     animation: float 8s ease-in-out infinite;
 }
 
@@ -257,7 +290,7 @@
     font-weight: 500;
     letter-spacing: 2px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards;
     animation-delay: 1s;
@@ -309,6 +342,7 @@
     
     .hero-title {
         font-size: 3.5rem;
+        min-height: 5.5rem; /* Increased for larger text */
     }
     
     .hero-subtitle {
@@ -337,43 +371,55 @@
         height: 100px;
         right: 15%;
     }
+    
+    .hero-content {
+        padding: 2.5rem 3rem;
+        border-radius: 48px;
+    }
+
+    .hero-sweep {
+        transform: skewY(3deg); /* Slightly less slant on tablets */
+    }
 }
 
 @media (min-width: 1024px) {
     .hero-title {
         font-size: 4.5rem;
+        min-height: 6rem;
     }
     
     .hero-subtitle {
         font-size: 1.5rem;
     }
+    
+    .hero-content {
+        padding: 3rem 4rem;
+        border-radius: 56px;
+        width: 85%;
+        max-width: 1000px;
+    }
+
+    .hero-sweep {
+        transform: skewY(2deg);
+    }
 }
 
-
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+/* Responsive adjustments for glass card */
+@media (max-width: 640px) {
+    .hero-content {
+        padding: 1.5rem;
+        border-radius: 28px;
+    }
+    .hero-title {
+        min-height: 5.5rem; /* Ensure enough space for wrapped text */
+        font-size: 1.6rem;
+    }
 }
 
-.hero-scroll {
-    position: absolute;
-    bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    animation: bounce 2s infinite;
-}
-
-/* @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-} */
+/* ============================================ */
+/* Existing styles for featured, services, CTA  */
+/* (unchanged from original)                    */
+/* ============================================ */
 
 /* Featured Section */
 .featured {

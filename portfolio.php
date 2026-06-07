@@ -156,29 +156,6 @@ include 'includes/header.php';
             </div>
         </div>
         
-        <!-- Before/After Slider -->
-        <div class="before-after-section" data-aos="zoom-in">
-            <h2>Our Editing Magic</h2>
-            <p>See the transformation in our work</p>
-            <div class="before-after-slider">
-                <div class="slider-container">
-                    <div class="before-label">BEFORE</div>
-                    <div class="after-label">AFTER</div>
-                    <img src="https://picsum.photos/id/104/800/500" alt="Before" class="before-img">
-                    <div class="after-img-wrapper">
-                        <img src="https://picsum.photos/id/106/800/500" alt="After" class="after-img">
-                        <div class="slider-handle">
-                            <div class="slider-line"></div>
-                            <div class="slider-circle">
-                                <i class="fas fa-chevron-left"></i>
-                                <i class="fas fa-chevron-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <input type="range" min="0" max="100" value="50" class="slider-input" id="beforeAfterSlider">
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -201,15 +178,6 @@ tabBtns.forEach(btn => {
     });
 });
 
-// Before/After Slider
-const slider = document.getElementById('beforeAfterSlider');
-const afterWrapper = document.querySelector('.after-img-wrapper');
-
-if(slider && afterWrapper) {
-    slider.addEventListener('input', function() {
-        afterWrapper.style.width = this.value + '%';
-    });
-}
 </script>
 
 <?php include 'includes/footer.php'; ?>

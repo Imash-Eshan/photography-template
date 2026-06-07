@@ -113,7 +113,7 @@ if (isset($_SESSION['admin_logged_in']) && isset($_GET['delete'])) {
                     </div>
                     <div class="login-actions">
                         <a href="index.php" class="btn-back">
-        <i class="fas fa-arrow-left"></i>  Back to Home
+        <i class="fas fa-arrow-left"></i> Back to Home
     </a>
 
     <button type="submit" name="login" class="btn-login">

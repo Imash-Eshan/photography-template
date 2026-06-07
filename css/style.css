@@ -222,27 +222,6 @@ body {
     margin-top: 5rem;
 }
 
-.footer-wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: translateY(-99%);
-}
-
-.footer-wave svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 60px;
-}
-
-.wave-fill {
-    fill: var(--bg-secondary);
-}
-
 .footer-main {
     padding: 4rem 0 2rem;
 }
