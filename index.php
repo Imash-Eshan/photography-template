@@ -5,7 +5,8 @@ include 'includes/header.php';
 ?>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/home.css">
-<!-- Hero Section -->
+
+<!-- Hero Section (untouched as requested) -->
 <section class="hero" data-aos="fade-in">
     <div class="hero-content">
         <h1 class="hero-title">
@@ -18,18 +19,11 @@ include 'includes/header.php';
             <a href="contact.php" class="btn btn-secondary">Book a Session</a>
         </div>
     </div>
-    
-    <!-- Dynamic light/shadow sweep effect -->
-    <div class="hero-sweep"></div>
-    
-    <!-- Decorative floating elements -->
     <div class="hero-decoration">
         <div class="deco-circle"></div>
         <div class="deco-circle"></div>
         <div class="deco-circle"></div>
     </div>
-
-    <!-- Scroll indicator -->
     <div class="hero-scroll-indicator" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">
         <span>SCROLL</span>
         <div class="scroll-mouse"></div>
@@ -59,11 +53,16 @@ include 'includes/header.php';
             </div>
             <?php endforeach; ?>
         </div>
+        <div class="featured-footer" style="text-align: center; margin-top: 3rem;">
+    <a href="gallery.php" class="btn btn-outline" style="min-width: 200px;">
+        View Full Gallery <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
     </div>
 </section>
 
 <!-- Services Section -->
-<section id="featured" class="featured" data-aos="fade-up">
+<section id="featured" class="services" data-aos="fade-up">
     <div class="container">
         <div class="section-header">
             <h2>Our Services</h2>
@@ -71,19 +70,53 @@ include 'includes/header.php';
         </div>
         <div class="services-grid">
             <div class="service-card" data-aos="flip-left">
-                <i class="fas fa-camera"></i>
+                <div class="service-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
                 <h3>Wedding Photography</h3>
                 <p>Capturing your special day with timeless elegance</p>
+                <div class="service-glow"></div>
             </div>
             <div class="service-card" data-aos="flip-left" data-aos-delay="100">
-                <i class="fas fa-user-friends"></i>
+                <div class="service-icon">
+                    <i class="fas fa-user-friends"></i>
+                </div>
                 <h3>Portrait Sessions</h3>
                 <p>Professional portraits for any occasion</p>
+                <div class="service-glow"></div>
             </div>
             <div class="service-card" data-aos="flip-left" data-aos-delay="200">
-                <i class="fas fa-calendar-alt"></i>
+                <div class="service-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
                 <h3>Event Coverage</h3>
                 <p>Corporate events, parties, and gatherings</p>
+                <div class="service-glow"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section - New Premium Addition -->
+<!-- Stats Section - With Counter Animation -->
+<section class="stats" data-aos="fade-up">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card" data-aos="zoom-in">
+                <div class="stat-number" data-count="500">0</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="stat-number" data-count="1200">0</div>
+                <div class="stat-label">Sessions Completed</div>
+            </div>
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stat-number" data-count="50">0</div>
+                <div class="stat-label">Awards Won</div>
+            </div>
+            <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="stat-number" data-count="8">0</div>
+                <div class="stat-label">Years Experience</div>
             </div>
         </div>
     </div>
@@ -92,9 +125,11 @@ include 'includes/header.php';
 <!-- CTA Section -->
 <section class="cta" data-aos="zoom-in">
     <div class="container">
-        <h2>Ready to Capture Your Memories?</h2>
-        <p>Let's create something beautiful together</p>
-        <a href="contact.php" class="btn btn-primary">Get in Touch</a>
+        <div class="cta-content">
+            <h2>Ready to Capture Your Memories?</h2>
+            <p>Let's create something beautiful together</p>
+            <a href="contact.php" class="btn btn-primary">Get in Touch</a>
+        </div>
     </div>
 </section>
 
@@ -132,6 +167,97 @@ function erase() {
 
 document.addEventListener("DOMContentLoaded", function() {
     if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+// Counter Animation for Stats Section
+function startCounters() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    const animateNumber = (element) => {
+        const target = parseInt(element.getAttribute('data-count'));
+        const duration = 2000; // 2 seconds
+        const step = Math.ceil(target / (duration / 16)); // 60fps
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += step;
+            if (current >= target) {
+                element.textContent = target + (target === 8 ? '+' : '+');
+                return;
+            }
+            element.textContent = current + '+';
+            requestAnimationFrame(updateCounter);
+        };
+        
+        updateCounter();
+    };
+    
+    // Use Intersection Observer to trigger when stats come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumber = entry.target;
+                // Only animate if not already animated
+                if (!statNumber.hasAttribute('data-animated')) {
+                    statNumber.setAttribute('data-animated', 'true');
+                    animateNumber(statNumber);
+                }
+                observer.unobserve(statNumber);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statNumbers.forEach(stat => observer.observe(stat));
+}
+
+// Alternative simpler version if you want numbers to end with + sign
+// Or use this more precise version with easing
+function startCountersEased() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    const easeOutQuad = (t) => t * (2 - t);
+    
+    const animateNumberEased = (element) => {
+        const target = parseInt(element.getAttribute('data-count'));
+        const duration = 2000;
+        const startTime = performance.now();
+        const startValue = 0;
+        
+        const updateCounterEased = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeOutQuad(progress);
+            const current = Math.floor(easedProgress * target);
+            
+            if (progress < 1) {
+                element.textContent = current + '+';
+                requestAnimationFrame(updateCounterEased);
+            } else {
+                element.textContent = target + '+';
+            }
+        };
+        
+        requestAnimationFrame(updateCounterEased);
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumber = entry.target;
+                if (!statNumber.hasAttribute('data-animated')) {
+                    statNumber.setAttribute('data-animated', 'true');
+                    animateNumberEased(statNumber);
+                }
+                observer.unobserve(statNumber);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    statNumbers.forEach(stat => observer.observe(stat));
+}
+
+// Initialize counters when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    startCountersEased(); // or startCounters() for simpler version
 });
 </script>
 
