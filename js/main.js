@@ -1,8 +1,15 @@
 // Dark Mode Toggle
+// Dark Mode Toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
 if (darkModeToggle) {
+    // Set dark mode as default if no preference exists
+    if (localStorage.getItem('darkMode') === null) {
+        localStorage.setItem('darkMode', 'enabled');
+        document.body.classList.add('dark');
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } 
     // Check for saved preference
-    if (localStorage.getItem('darkMode') === 'enabled') {
+    else if (localStorage.getItem('darkMode') === 'enabled') {
         document.body.classList.add('dark');
         darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }

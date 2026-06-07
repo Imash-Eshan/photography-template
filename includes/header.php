@@ -9,6 +9,16 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <script>
+// Prevent flash of light mode - set dark immediately
+(function() {
+    if (localStorage.getItem('darkMode') === null) {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark');
+    }
+})();
+</script>
     <!-- Dark Mode Toggle -->
     <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
